@@ -2,6 +2,7 @@ package com.shopsphere.shopSphere.controller;
 
 
 import com.shopsphere.shopSphere.dto.CartRequest;
+import com.shopsphere.shopSphere.dto.CartResponse;
 import com.shopsphere.shopSphere.model.Cart;
 import com.shopsphere.shopSphere.service.CartService;
 import lombok.RequiredArgsConstructor;
@@ -34,5 +35,10 @@ public class CartController {
         boolean deleted = cartService.deleteFromItemCart(userId, productId);
         return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
 
+    }
+
+    @GetMapping("/{productId}")
+    public ResponseEntity<List<Cart>> getCart(@RequestHeader("X-User-ID") String userId) {
+        return ResponseEntity.ok(cartService.getCart(userId));
     }
 }

@@ -2,6 +2,7 @@ package com.shopsphere.shopSphere.service;
 
 
 import com.shopsphere.shopSphere.dto.CartRequest;
+import com.shopsphere.shopSphere.dto.CartResponse;
 import com.shopsphere.shopSphere.model.Cart;
 import com.shopsphere.shopSphere.model.Product;
 import com.shopsphere.shopSphere.model.User;
@@ -13,7 +14,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -74,6 +77,19 @@ public class CartService {
 
 
         return false;
+
+    }
+
+    public List<Cart> getCart(String userId) {
+        return userRepository.findById(Long.valueOf(userId))
+                .map(cartRepository::findByUser)
+                .orElseGet(List::of);
+
+    }
+
+    public void clearCart(String userId) {
+        userRepository.findById(Long.valueOf(userId))
+                .ifPresent(cartRepository::deleteByUser);
 
     }
 }
