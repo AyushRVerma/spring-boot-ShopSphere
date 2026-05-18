@@ -69,6 +69,7 @@ updateUserFromRequest(user, userRequest);
         user.setLastName(userRequest.getLastName());
         user.setEmail(userRequest.getEmail());
         user.setPhone(userRequest.getPhone());
+
         if(userRequest.getAddressd()!=null) {
             Address address = new Address();
             address.setCity(userRequest.getAddressd().getCity());
