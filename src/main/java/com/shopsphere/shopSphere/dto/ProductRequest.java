@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 @Data
 public class ProductRequest {
 
+    @Id
     private Long productId;
     private String productName;
     private String productDescription;

@@ -10,12 +10,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 //@AllArgsConstructor
@@ -35,4 +33,30 @@ public class ProductController {
                 HttpStatus.CREATED);
     }
 
+    @PutMapping("/{productId}")
+    public ResponseEntity<ProductResponse> updateProduct(@PathVariable Long productId, @RequestBody ProductRequest product) {
+
+        return  productService.updateProduct(productId, product)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping
+    public ResponseEntity<List<ProductResponse>> getAllProduct() {
+        return ResponseEntity.ok(productService.getAllProducts());
+    }
+
+    @DeleteMapping("/{productId}")
+    public ResponseEntity<Void> updateProduct(@PathVariable Long productId) {
+
+        boolean deleted =  productService.deleteProduct(productId);
+        return  deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
+//                .map(ResponseEntity::ok)
+//                .orElse(ResponseEntity.notFound().build());
+    }
+@GetMapping("/search  ")
+    public ResponseEntity<List<ProductResponse>> searchProduct (@RequestParam String keyword){
+        return ResponseEntity.ok(productService.searchProduct(keyword));
+//        return ResponseEntity.ok(productService.getAllProducts());
+    }
 }

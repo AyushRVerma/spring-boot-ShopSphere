@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class UserRequest {
-@Id
+//@Id
     private String id;
     private String firstName;
     private String lastName;
