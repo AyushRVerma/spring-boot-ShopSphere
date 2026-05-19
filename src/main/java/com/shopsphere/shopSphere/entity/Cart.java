@@ -1,4 +1,4 @@
-package com.shopsphere.shopSphere.model;
+package com.shopsphere.shopSphere.entity;
 
 
 import jakarta.persistence.*;

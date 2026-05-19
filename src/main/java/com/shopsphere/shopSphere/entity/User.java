@@ -1,4 +1,4 @@
-package com.shopsphere.shopSphere.model;
+package com.shopsphere.shopSphere.entity;
 
 
 import jakarta.persistence.*;
@@ -7,9 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity(name = "user_table")

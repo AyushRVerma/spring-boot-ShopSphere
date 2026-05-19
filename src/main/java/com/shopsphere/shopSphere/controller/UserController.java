@@ -2,14 +2,12 @@ package com.shopsphere.shopSphere.controller;
 
 import com.shopsphere.shopSphere.dto.UserRequest;
 import com.shopsphere.shopSphere.dto.UserResponse;
-import com.shopsphere.shopSphere.model.User;
 import com.shopsphere.shopSphere.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -36,7 +34,7 @@ private final UserService userService ;
         return ResponseEntity.ok("User added successfully");
     }
 
-    @GetMapping("/api/{id}")
+    @GetMapping("/api/users/{id}")
         public ResponseEntity<UserResponse> getUsers(@PathVariable Long id) {
         return userService.fetchUsersById(id)
                 .map(ResponseEntity::ok)
@@ -44,7 +42,7 @@ private final UserService userService ;
 
 
     }
- @PutMapping("/api/{id}")
+ @PutMapping("/api/users/{id}")
     public ResponseEntity<String> updateUsers(@PathVariable Long id, @RequestBody UserRequest updatedUser) {
         boolean updated = userService.updateUser(id, updatedUser);
         if(updated)

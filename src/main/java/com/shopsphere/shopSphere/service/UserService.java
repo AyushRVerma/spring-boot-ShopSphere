@@ -4,8 +4,8 @@ package com.shopsphere.shopSphere.service;
 import com.shopsphere.shopSphere.dto.AddressDTO;
 import com.shopsphere.shopSphere.dto.UserRequest;
 import com.shopsphere.shopSphere.dto.UserResponse;
-import com.shopsphere.shopSphere.model.Address;
-import com.shopsphere.shopSphere.model.User;
+import com.shopsphere.shopSphere.entity.Address;
+import com.shopsphere.shopSphere.entity.User;
 import com.shopsphere.shopSphere.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Service
 @RequiredArgsConstructor

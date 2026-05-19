@@ -3,18 +3,15 @@ package com.shopsphere.shopSphere.service;
 
 import com.shopsphere.shopSphere.dto.OrderItemDTO;
 import com.shopsphere.shopSphere.dto.OrderResponse;
-import com.shopsphere.shopSphere.model.*;
+import com.shopsphere.shopSphere.entity.*;
 import com.shopsphere.shopSphere.repository.OrderRepository;
 import com.shopsphere.shopSphere.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

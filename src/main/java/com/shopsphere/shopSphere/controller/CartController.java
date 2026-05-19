@@ -2,8 +2,7 @@ package com.shopsphere.shopSphere.controller;
 
 
 import com.shopsphere.shopSphere.dto.CartRequest;
-import com.shopsphere.shopSphere.dto.CartResponse;
-import com.shopsphere.shopSphere.model.Cart;
+import com.shopsphere.shopSphere.entity.Cart;
 import com.shopsphere.shopSphere.service.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -37,7 +36,7 @@ public class CartController {
 
     }
 
-    @GetMapping("/{productId}")
+    @GetMapping
     public ResponseEntity<List<Cart>> getCart(@RequestHeader("X-User-ID") String userId) {
         return ResponseEntity.ok(cartService.getCart(userId));
     }

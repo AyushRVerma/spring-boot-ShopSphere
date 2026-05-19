@@ -1,6 +1,6 @@
 package com.shopsphere.shopSphere.repository;
 
-import com.shopsphere.shopSphere.model.Order;
+import com.shopsphere.shopSphere.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

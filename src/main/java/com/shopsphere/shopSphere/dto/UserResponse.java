@@ -1,7 +1,6 @@
 package com.shopsphere.shopSphere.dto;
 
-import com.shopsphere.shopSphere.model.UserRole;
-import jakarta.persistence.Id;
+import com.shopsphere.shopSphere.entity.UserRole;
 import lombok.Data;
 
 @Data

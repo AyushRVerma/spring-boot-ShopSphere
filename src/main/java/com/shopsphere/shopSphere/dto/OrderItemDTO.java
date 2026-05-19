@@ -15,8 +15,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class OrderItemDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private Long productID;
     private Integer quantity;

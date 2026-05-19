@@ -1,4 +1,4 @@
-package com.shopsphere.shopSphere.model;
+package com.shopsphere.shopSphere.entity;
 
 public enum OrderStatus {
     PENDING,CONFIRMED,SHIPPED,DELIVERED,CANCELLED

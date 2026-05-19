@@ -2,10 +2,9 @@ package com.shopsphere.shopSphere.service;
 
 import com.shopsphere.shopSphere.dto.ProductResponse;
 import com.shopsphere.shopSphere.dto.ProductRequest;
-import com.shopsphere.shopSphere.model.Product;
+import com.shopsphere.shopSphere.entity.Product;
 import com.shopsphere.shopSphere.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

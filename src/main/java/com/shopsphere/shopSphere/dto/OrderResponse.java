@@ -1,7 +1,6 @@
 package com.shopsphere.shopSphere.dto;
 
-import com.shopsphere.shopSphere.model.OrderItem;
-import com.shopsphere.shopSphere.model.OrderStatus;
+import com.shopsphere.shopSphere.entity.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

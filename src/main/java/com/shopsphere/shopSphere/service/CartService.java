@@ -2,10 +2,9 @@ package com.shopsphere.shopSphere.service;
 
 
 import com.shopsphere.shopSphere.dto.CartRequest;
-import com.shopsphere.shopSphere.dto.CartResponse;
-import com.shopsphere.shopSphere.model.Cart;
-import com.shopsphere.shopSphere.model.Product;
-import com.shopsphere.shopSphere.model.User;
+import com.shopsphere.shopSphere.entity.Cart;
+import com.shopsphere.shopSphere.entity.Product;
+import com.shopsphere.shopSphere.entity.User;
 import com.shopsphere.shopSphere.repository.CartRepository;
 import com.shopsphere.shopSphere.repository.ProductRepository;
 import com.shopsphere.shopSphere.repository.UserRepository;
@@ -16,7 +15,6 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

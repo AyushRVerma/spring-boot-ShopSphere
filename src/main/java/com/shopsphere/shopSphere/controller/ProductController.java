@@ -2,18 +2,13 @@ package com.shopsphere.shopSphere.controller;
 
 import com.shopsphere.shopSphere.dto.ProductRequest;
 import com.shopsphere.shopSphere.dto.ProductResponse;
-import com.shopsphere.shopSphere.model.Product;
-import com.shopsphere.shopSphere.repository.ProductRepository;
 import com.shopsphere.shopSphere.service.ProductService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 //@AllArgsConstructor
@@ -54,7 +49,7 @@ public class ProductController {
 //                .map(ResponseEntity::ok)
 //                .orElse(ResponseEntity.notFound().build());
     }
-@GetMapping("/search  ")
+@GetMapping("/search ")
     public ResponseEntity<List<ProductResponse>> searchProduct (@RequestParam String keyword){
         return ResponseEntity.ok(productService.searchProduct(keyword));
 //        return ResponseEntity.ok(productService.getAllProducts());
