@@ -68,13 +68,13 @@ updateUserFromRequest(user, userRequest);
         user.setEmail(userRequest.getEmail());
         user.setPhone(userRequest.getPhone());
 
-        if(userRequest.getAddressd()!=null) {
+        if(userRequest.getAddress()!=null) {
             Address address = new Address();
-            address.setCity(userRequest.getAddressd().getCity());
-            address.setState(userRequest.getAddressd().getState());
-            address.setZipcode(userRequest.getAddressd().getZipcode());
-            address.setStreet(userRequest.getAddressd().getStreet());
-            address.setCountry(userRequest.getAddressd().getCountry());
+            address.setCity(userRequest.getAddress().getCity());
+            address.setState(userRequest.getAddress().getState());
+            address.setZipcode(userRequest.getAddress().getZipcode());
+            address.setStreet(userRequest.getAddress().getStreet());
+            address.setCountry(userRequest.getAddress().getCountry());
            user.setAddress(address);
         }
     }

@@ -1,5 +1,6 @@
 package com.shopsphere.shopSphere.repository;
 
+import com.shopsphere.shopSphere.dto.CartResponse;
 import com.shopsphere.shopSphere.entity.Cart;
 import com.shopsphere.shopSphere.entity.Product;
 import com.shopsphere.shopSphere.entity.User;

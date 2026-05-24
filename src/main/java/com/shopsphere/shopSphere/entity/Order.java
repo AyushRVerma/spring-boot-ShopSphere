@@ -13,7 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@Entity(name = "orders")
+@Entity
+        (name = "orders")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {

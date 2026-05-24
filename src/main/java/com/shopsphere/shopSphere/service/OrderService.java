@@ -6,6 +6,7 @@ import com.shopsphere.shopSphere.dto.OrderResponse;
 import com.shopsphere.shopSphere.entity.*;
 import com.shopsphere.shopSphere.repository.OrderRepository;
 import com.shopsphere.shopSphere.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,7 @@ public class OrderService {
     private final CartService cartService;
     private final UserRepository userRepository;
 
+    @Transactional
     public Optional <OrderResponse> createOrder(String userId) {
         //Validate for Cart Items
 

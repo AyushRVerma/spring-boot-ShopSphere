@@ -49,7 +49,7 @@ public class ProductController {
 //                .map(ResponseEntity::ok)
 //                .orElse(ResponseEntity.notFound().build());
     }
-@GetMapping("/search ")
+@GetMapping("/search")
     public ResponseEntity<List<ProductResponse>> searchProduct (@RequestParam String keyword){
         return ResponseEntity.ok(productService.searchProduct(keyword));
 //        return ResponseEntity.ok(productService.getAllProducts());
